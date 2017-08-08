@@ -1,0 +1,8 @@
+<h1>Options</h1>
+<%= link_to 'New Option', new_option_path %>
+
+<ul class="options">
+  <% @options.each do |option| %>
+    <li><%= option.name %></li>
+  <% end %>
+</ul>
