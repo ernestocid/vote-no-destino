@@ -3,6 +3,6 @@
 
 <ul class="options">
   <% @options.each do |option| %>
-    <li><%= option.name %></li>
+    <li><%= option.name %> <%= link_to 'Delete', option_path(option), method: "delete", data: { confirm: 'Are you sure?' } %></li>
   <% end %>
 </ul>

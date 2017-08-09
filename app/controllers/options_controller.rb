@@ -19,6 +19,18 @@ class OptionsController < ApplicationController
     end
   end
 
+  def destroy
+    @option = Option.find params[:id]
+
+    respond_to do |format|
+      if @option.destroy
+        format.html { redirect_to options_path, notice: 'Successfully destroyed.' }
+      else
+        format.html { redirect_to options_path, alert: 'Action failed.' }
+      end
+    end
+  end
+
   private
 
   def option_params
