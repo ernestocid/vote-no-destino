@@ -12,9 +12,9 @@ class OptionsController < ApplicationController
 
     respond_to do |format|
       if @option.save
-        format.html { redirect_to options_path, notice: 'Saved successfully.' }
+        format.html { redirect_to options_path, notice: t('messages.action_success') }
       else
-        format.html { redirect_to options_path, alert: 'Could not save.' }
+        format.html { redirect_to options_path, alert: t('messages.action_failed') }
       end
     end
   end
@@ -24,9 +24,9 @@ class OptionsController < ApplicationController
 
     respond_to do |format|
       if @option.destroy
-        format.html { redirect_to options_path, notice: 'Successfully destroyed.' }
+        format.html { redirect_to options_path, notice: t('messages.action_success') }
       else
-        format.html { redirect_to options_path, alert: 'Action failed.' }
+        format.html { redirect_to options_path, alert: t('messages.action_failed') }
       end
     end
   end
