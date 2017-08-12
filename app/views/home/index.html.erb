@@ -1,11 +1,35 @@
-<h1>Home</h1>
-
-<%= link_to 'Start New Survey!', '/vote-no-destino', class: 'button' %>
-
-<% if @overall_results.any? %>
-  <h1>Overall Results</h1>
-
-  <div id="overall_results">
-    <%= render partial: 'shared/results_table', locals: { results: @overall_results } %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="header text-center">
+      <h1>What is you next destination?</h1>
+    </div>
   </div>
-<% end %>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title text-center">Where are you going next?</h4>
+        <p class="card-text">
+          Sorry, we are curious! We want to know where are you planning to travel next.
+          Can you take a minute of you time to answer our survey?
+        </p>
+        <div class="text-center">
+          <%= link_to 'Answer Our Survey', '/vote-no-destino', class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-body">
+        <h4>Our Rankings</h4>
+        <p class="card-text">So for these are the results of our survey.</p>
+      </div>
+      <%= render partial: 'shared/results_table', locals: { results: @overall_results } %>
+    </div>
+  </div>
+</div>
+
