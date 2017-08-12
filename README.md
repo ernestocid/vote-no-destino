@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Link for the project hosted on Heroku: [vote-no-destino-2.herokuapp.com/](vote-no-destino-2.herokuapp.com/)
 
-Things you may want to cover:
+## Ruby and Rails versions
 
-* Ruby version
+Ruby 2.3.1
+Rails 5.0.5
 
-* System dependencies
+## Basic Setup
 
-* Configuration
+Just run:
 
-* Database creation
+`` bundle install
 
-* Database initialization
+## Database Initialisation
 
-* How to run the test suite
+Create a .env file and fill up the information needed there. You can copy from the sample .env provided
 
-* Services (job queues, cache servers, search engines, etc.)
+`` cp .env.sample .env
 
-* Deployment instructions
+After you fill up the information run:
 
-* ...
+`` rails db:create
+`` rails db:migrate
+
+## Testing
+
+The project uses rspec for testing so just run:
+
+`` rspec
