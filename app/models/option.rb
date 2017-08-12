@@ -1,5 +1,6 @@
 class Option < ApplicationRecord
   validates :name, presence: true, uniqueness: true
+  validates_with MaxEntriesValidator, on: :create
 
   def self.build_random_combinations
     all.to_a.combination(2).to_a.shuffle!
