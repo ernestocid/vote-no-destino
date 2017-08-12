@@ -1,0 +1,4 @@
+<%= simple_form_for @question, url: survey_question_path do |f| %>
+  <%= f.association :answer, collection: @question.options, as: :radio_buttons, class: 'question_option' %>
+  <%= f.button :submit, "Vote"  %>
+<% end %>

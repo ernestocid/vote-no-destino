@@ -1,0 +1,8 @@
+<%= simple_form_for @survey, url: survey_path do |f| %>
+  <%= f.simple_fields_for :user do |n| %>
+    <%= n.input :name %>
+    <%= n.input :email %>
+  <% end %>
+
+  <%= f.button :submit, "Finish Survey"  %>
+<% end %>

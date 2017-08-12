@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Extras
 gem 'dotenv-rails'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug', platform: :mri
