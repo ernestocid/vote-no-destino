@@ -1,4 +1,6 @@
 class Question < ApplicationRecord
+  default_scope { includes(:answer) }
+
   belongs_to :survey
   belongs_to :answer, class_name: 'Option', optional: true
   has_many :question_options, dependent: :destroy
