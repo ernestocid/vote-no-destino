@@ -1,8 +1,21 @@
-<%= simple_form_for @survey, url: survey_path do |f| %>
-  <%= f.simple_fields_for :user do |n| %>
-    <%= n.input :name %>
-    <%= n.input :email %>
-  <% end %>
+<div class="row">
+  <div class="col-md-3">
+  </div>
 
-  <%= f.button :submit, "Finish Survey"  %>
-<% end %>
+  <div class="col-md-6 offset-md-3">
+    <div class="card question-card">
+      <div class="card-body text-center">
+        <h4 class="card-title">Tell us a little bit more about you</h4>
+        <%= simple_form_for @survey, url: survey_path do |f| %>
+          <%= f.simple_fields_for :user do |n| %>
+            <%= n.input :name %>
+            <%= n.input :email %>
+          <% end %>
+
+          <%= f.button :submit, "Finish Survey", class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

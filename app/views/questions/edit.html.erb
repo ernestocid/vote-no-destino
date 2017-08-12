@@ -1,4 +1,16 @@
-<%= simple_form_for @question, url: survey_question_path do |f| %>
-  <%= f.association :answer, collection: @question.options, as: :radio_buttons, class: 'question_option' %>
-  <%= f.button :submit, "Vote"  %>
-<% end %>
+<div class="row">
+  <div class="col-md-3">
+  </div>
+
+  <div class="col-md-6 offset-md-3">
+    <div class="card question-card">
+      <div class="card-body text-center">
+        <h4 class="card-title">Where would you rather go?</h4>
+        <%= simple_form_for @question, url: survey_question_path do |f| %>
+          <%= f.association :answer, label: '', collection: @question.options, as: :radio_buttons, class: 'question_option' %>
+          <%= f.button :submit, "Vote", class: 'btn btn-primary'  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
