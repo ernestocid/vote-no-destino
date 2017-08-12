@@ -32,6 +32,6 @@ module Features
   end
 
   def display_button(text)
-    have_selector '.button', text: text
+    have_selector '.btn', text: text
   end
 end
