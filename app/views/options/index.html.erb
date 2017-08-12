@@ -18,7 +18,7 @@
     <table class="table">
       <tbody>
         <% @options.each do |option| %>
-          <tr>
+          <tr class="option">
             <td><%= option.name %></td>
             <td class="text-right"><%= link_to 'Delete', option_path(option), method: "delete", data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
           </tr>

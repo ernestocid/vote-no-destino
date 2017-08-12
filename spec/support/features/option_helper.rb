@@ -6,6 +6,6 @@ module Features
   end
 
   def display_option(name)
-    have_selector '.options', text: name
+    have_selector '.option', text: name
   end
 end
