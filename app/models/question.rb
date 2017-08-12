@@ -6,6 +6,8 @@ class Question < ApplicationRecord
 
   scope :answered, -> { where.not(answer: nil) }
 
+  delegate :name, to: :answer
+
   def answered?
     answer.present?
   end
