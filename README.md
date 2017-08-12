@@ -1,6 +1,7 @@
 # README
 
-Link for the project hosted on Heroku: [http://vote-no-destino-2.herokuapp.com/](http://vote-no-destino-2.herokuapp.com/)
+Link for the project hosted on Heroku: [http://vote-no-destino-2.herokuapp.com/](http://vote-no-destino-2.herokuapp.com/).
+Survey options can be managed by accessing the /options url.
 
 ## Setup
 ### Dependencies
