@@ -19,10 +19,6 @@ module Features
     have_selector '.alert', text: text
   end
 
-  def display_notice(text)
-    have_selector '.notice', text: text
-  end
-
   def display_user_results
     have_selector '#user_results'
   end

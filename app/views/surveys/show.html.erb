@@ -1,15 +1,33 @@
-<% if @user_results.any? %>
-  <h1>Your results</h1>
-
-  <div id="user_results">
-    <%= render partial: 'shared/results_table', locals: { results: @user_results } %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="header text-center">
+      <h1>Current Results</h1>
+    </div>
   </div>
-<% end %>
+</div>
 
-<% if @overall_results.any? %>
-  <h1>Overall Results</h1>
-
-  <div id="overall_results">
-    <%= render partial: 'shared/results_table', locals: { results: @overall_results } %>
+<div class="row">
+  <div class="col-md-6">
+    <% if @user_results.any? %>
+      <div id="user_results" class="card">
+        <div class="card-body">
+          <h4>Your results</h4>
+          <p class="card-text">These are the results for your choices.</p>
+        </div>
+        <%= render partial: 'shared/results_table', locals: { results: @user_results } %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+
+  <div class="col-md-6">
+    <% if @overall_results.any? %>
+      <div id="overall_results" class="card">
+        <div class="card-body">
+          <h4>Overall Results</h4>
+          <p class="card-text">There are the results considering all answered surveys.</p>
+        </div>
+        <%= render partial: 'shared/results_table', locals: { results: @overall_results } %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -11,7 +11,7 @@ feature 'User answers survey' do
     fill_user_information(name: 'Jon Snow', email: 'thekinginthenorth@winterfell.com')
     click_on 'Finish Survey'
 
-    expect(page).to display_notice 'Thanks for answering our survey!'
+    expect(page).to display_alert 'Thanks for answering our survey!'
     expect(page).to display_user_results
     expect(page).to display_overall_results
   end
