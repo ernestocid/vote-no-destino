@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Votes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% results.each do |place, votes| %>
+      <tr>
+        <td><%= place %></td>
+        <td><%= votes %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

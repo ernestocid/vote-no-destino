@@ -12,5 +12,7 @@ feature 'User answers survey' do
     click_on 'Finish Survey'
 
     expect(page).to display_notice 'Thanks for answering our survey!'
+    expect(page).to display_user_results
+    expect(page).to display_overall_results
   end
 end

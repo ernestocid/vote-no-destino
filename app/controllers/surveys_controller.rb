@@ -25,7 +25,9 @@ class SurveysController < ApplicationController
   end
 
   def show
-    @survey = Survey.find params[:id]
+    survey = Survey.find params[:id]
+    @user_results = VoteChecker.compute_for survey.questions
+    @overall_results = VoteChecker.compute_all_votes
   end
 
   private

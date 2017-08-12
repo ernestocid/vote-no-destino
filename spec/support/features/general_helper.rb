@@ -22,4 +22,12 @@ module Features
   def display_notice(text)
     have_selector '.notice', text: text
   end
+
+  def display_user_results
+    have_selector '#user_results'
+  end
+
+  def display_overall_results
+    have_selector '#overall_results'
+  end
 end
