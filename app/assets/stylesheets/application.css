@@ -28,3 +28,11 @@
 .radio_buttons {
   margin: 30px 10px 30px 10px;
 }
+
+.input {
+  margin: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
