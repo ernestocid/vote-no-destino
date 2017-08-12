@@ -9,6 +9,6 @@ class Survey < ApplicationRecord
   end
 
   def next_unanswered_question
-    unanswered_questions.first
+    unanswered_questions.first || NilQuestion.new
   end
 end
