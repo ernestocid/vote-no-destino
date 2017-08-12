@@ -1,6 +1,6 @@
 module VoteChecker
-  def self.compute_for(questions)
-    compute questions
+  def self.compute_for(survey)
+    compute survey.questions
   end
 
   def self.compute_all_votes
