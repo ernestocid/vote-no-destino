@@ -30,4 +30,8 @@ module Features
   def display_overall_results
     have_selector '#overall_results'
   end
+
+  def display_button(text)
+    have_selector '.button', text: text
+  end
 end
