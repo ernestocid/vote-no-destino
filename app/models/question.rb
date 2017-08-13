@@ -14,4 +14,8 @@ class Question < ApplicationRecord
   def answered?
     answer.present?
   end
+
+  def questions_left
+    survey.unanswered_questions.count
+  end
 end

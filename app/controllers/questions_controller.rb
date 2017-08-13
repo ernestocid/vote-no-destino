@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   def edit
     @question = Question.find params[:id]
+    @remaining_questions = @question.questions_left
   end
 
   def update
