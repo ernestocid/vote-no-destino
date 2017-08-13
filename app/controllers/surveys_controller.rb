@@ -19,7 +19,7 @@ class SurveysController < ApplicationController
       if @survey.update(survey_params)
         format.html { redirect_to survey_path(@survey), notice: 'Thanks for answering our survey!' }
       else
-        format.html { redirect_to '/vote-no-destino', alert: 'Sorry, an error ocurred in your survey :(' }
+        format.html { redirect_to edit_survey_path(@survey), alert: @survey.errors.full_messages.join(', ') }
       end
     end
   end
